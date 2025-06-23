@@ -1,24 +1,26 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width
 
 export default function ProfileScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Perfil Screen</Text>
-      <View style={styles.button}>
+      <Text style={styles.title}>Profile Screen</Text>
+      <View style={styles.buttonContainer}>
         <Button 
-        title="Go to Home"
-        onPress={() => navigation.navigate('Home')} />
+            title="Go to Home"
+            onPress={() => navigation.navigate('Home')} />
       </View>
-      <View style={styles.button}>
+      <View style={styles.buttonContainer}>
         <Button 
-        title="Go to Details" 
-        onPress={() => navigation.navigate('Details')} />
+            title="Go to Details" 
+            onPress={() => navigation.navigate('Details')} />
       </View>
-      <View style={styles.button}>
+      <View style={styles.buttonContainer}>
         <Button 
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
+            title="Go Back" 
+            onPress={() => navigation.goBack()} />
       </View>
     </View>
   );
