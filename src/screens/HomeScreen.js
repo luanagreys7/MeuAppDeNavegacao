@@ -8,6 +8,7 @@ export default function HomeScreen({ navigation }) {
 
     const logout = async () => {
         await AsyncStorage.removeItem('logado');
+        Alert.alert('Você saiu', 'Login encerrado com sucesso.');
         navigation.replace('Login');
     };
 
@@ -29,7 +30,6 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.buttonContainer}>
                 <Button
                     title="Sair"
-                    color="red"
                     onPress={logout}
                 />
             </View>
