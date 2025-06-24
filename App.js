@@ -46,7 +46,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={isLoggedIn ? 'Home' : 'Login'}>
+      <Stack.Navigator initialRouteName={isLoggedIn ? "Home" : "Login"}>
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerBackVisible: false }} />
         <Stack.Screen name="Details" component={DetailsScreen} options={{ headerShown: false }} />
