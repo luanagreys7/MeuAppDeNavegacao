@@ -9,7 +9,7 @@ export default function LoginScreen({ navigation }) {
 
   const validarLogin = async () => {
     if (login === 'admin' && senha === '1234') {
-        await AsyncStorage.setItem('logado','true');
+        await AsyncStorage.setItem('logado', 'true');
         navigation.replace('Home'); 
     } else {
         Alert.alert('Erro', 'Login ou senha incorretos.');
