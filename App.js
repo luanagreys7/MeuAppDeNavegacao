@@ -17,13 +17,18 @@ export default function App() {
 
   useEffect(() => {
     const verificarLogin = async () => {
-      const logado = await AsyncStorage.getItem('logado');
-      if (logado === 'true') {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
+      try {
+        const logado = await AsyncStorage.getItem('logado');
+        if (logado === 'true') {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (erro) {
+        console.log('ERRO AO VERIFICAR LOGIN:', erro);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     verificarLogin();
