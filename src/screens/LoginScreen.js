@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Text, Alert } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text, Alert, Dimensions } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+const windowWidth = Dimensions.get('window').width;
 
 export default function LoginScreen({ navigation }) {
     const [login, setLogin] = useState('');
