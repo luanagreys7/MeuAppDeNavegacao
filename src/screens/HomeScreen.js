@@ -15,24 +15,19 @@ export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Home Screen</Text>
+
             <View style={styles.buttonContainer}>
-                <Button
-                    title="Go to Details"
-                    onPress={() => navigation.navigate('Details')}
-                />
+                <Button title="Go to Details" onPress={() => navigation.navigate('Details')}/>
             </View>
+
             <View style={styles.buttonContainer}>
-                <Button
-                    title="Go to Profile"
-                    onPress={() => navigation.navigate('Profile')}
-                />
+                <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')}/>
             </View>
+
             <View style={styles.buttonContainer}>
-                <Button
-                    title="Sair"
-                    onPress={logout}
-                />
+                <Button title="Sair" onPress={logout} />
             </View>
+
         </View>
     );
 }
