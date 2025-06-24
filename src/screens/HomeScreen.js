@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
                 <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')}/>
             </View>
 
-            <View style={styles.buttonContainer}>
+            <View style={styles.logoutBox}>
                 <Button title="Sair" onPress={logout} />
             </View>
 
@@ -48,5 +48,10 @@ const styles = StyleSheet.create({
         margin: 10,
         width: windowWidth * 0.5, 
         borderRadius: 5,
+    },
+    logoutBox: {
+        backgroundColor: '#ffeeee',
+        padding: 20,
+        borderRadius: 10,
     },
 });
