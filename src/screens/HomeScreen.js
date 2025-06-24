@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, Button, Alert } from 'react-native';
+import { View, Text, StyleSheet, Button, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const windowWidth = Dimensions.get('window').width;
 
 export default function HomeScreen({ navigation }) {
 
@@ -24,7 +22,7 @@ export default function HomeScreen({ navigation }) {
                 <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')}/>
             </View>
 
-            <View style={styles.logoutBox}>
+            <View style={styles.buttonContainer}>
                 <Button title="Sair" onPress={logout} />
             </View>
 
@@ -48,10 +46,5 @@ const styles = StyleSheet.create({
         margin: 10,
         width: windowWidth * 0.5, 
         borderRadius: 5,
-    },
-    logoutBox: {
-        backgroundColor: '#ffeeee',
-        padding: 20,
-        borderRadius: 10,
     },
 });
