@@ -23,7 +23,7 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.buttonContainer}>
                 <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')}/>
             </View>
-
+            <Text>Botão de logout deveria estar abaixo</Text>
             <View style={styles.buttonContainer}>
                 <Button title="Sair" onPress={logout} />
             </View>
