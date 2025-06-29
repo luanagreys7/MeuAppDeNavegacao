@@ -16,7 +16,6 @@ export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    AsyncStorage.clear();
     const verificarLogin = async () => {
       try {
         const logado = await AsyncStorage.getItem('logado');

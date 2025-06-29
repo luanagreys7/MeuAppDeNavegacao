@@ -27,7 +27,6 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.buttonContainer}>
                 <Button title="Sair" onPress={logout} />
             </View>
-
         </View>
     );
 }
